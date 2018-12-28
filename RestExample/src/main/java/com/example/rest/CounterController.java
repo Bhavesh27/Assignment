@@ -22,13 +22,6 @@ public class CounterController {
 
     @RequestMapping("/counter")
     public Counter library() {
-    	long count = counter.incrementAndGet();
-        return counterService.incrementCount(new Counter(count,count));
+        return counterService.incrementCount(new Counter(1,counter.incrementAndGet()));
     }
-//    @RequestMapping(value = "/library", method = RequestMethod.POST)
-//    public String post(@RequestBody Library library) {
-//    	System.out.println(library.toString());
-//        //Library library = new Library(name.);
-//    	return "Got data";
-//    }
 }

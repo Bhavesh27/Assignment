@@ -12,15 +12,16 @@ import javax.persistence.Table;
 public class Counter {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	@Column
     private long counter;
 	
-    public long getId() {
+    
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public long getCounter() {
@@ -33,14 +34,11 @@ public class Counter {
 	public String toString() {
 		return "Counter [id=" + id + ", counter=" + counter + "]";
 	}
-	public Counter(long id, long counter) {
+	
+	public Counter(int id, long counter) {
 		super();
 		this.id = id;
 		this.counter = counter;
-	}
-	public Counter(long id) {
-		super();
-		this.id = id;
 	}
 	public Counter() {
 		super();
