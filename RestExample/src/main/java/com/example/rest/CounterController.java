@@ -11,11 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.rest.service.CounterService;
 
+/**
+ * Controller
+ * Simple Get Request to increment the number
+ *
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class CounterController {
 	
-    private final AtomicLong counter = new AtomicLong();
+	private final AtomicLong counter = new AtomicLong();
     
     @Autowired
     CounterService counterService;
